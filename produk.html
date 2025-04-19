@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Koleksi Batik - Batik Nusantara</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<script src="produk.js"></script>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-batik" href="index.html">Batik.In</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Produk</a></li>
+        <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+        <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+        <li class="nav-item"><a class="nav-link" href="pembeli.html">Pembeli</a></li>
+        <li class="nav-item">
+          <a class="nav-link position-relative" href="keranjang.html">
+            🛒 Keranjang
+            <span id="jumlahKeranjang" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              0
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Header -->
+<header style="position: relative; background-image: url('https://media.istockphoto.com/id/521910623/id/foto/batik-making-in-yogyakarta.jpg?b=1&s=612x612&w=0&k=20&c=PZA-5wecRVIM1jIHe63_U0-2gGfwRFJIkVKZ3-yaW_E='); background-size: cover; background-position: center; background-repeat: no-repeat;" class="text-white text-center py-5">
+  <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.3); z-index: 1;"></div>
+  <div class="container" style="position: relative; z-index: 2; color: white;">
+    <h1 class="fw-bold" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.4);">Keindahan Batik dalam Setiap Lembaran</h1>
+    <p class="lead" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">Temukan pesona motif tradisional yang sarat makna budaya.</p>
+  </div>
+</header>
+
+
+<!-- Produk List -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Produk 1 -->
+      <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <a href="detailproduk.html?id=1" class="text-decoration-none text-batik">
+        <img src="css/kain_batik_mega_mendung-removebg-preview.png" class="card-img-top" alt="Batik Mega Mendung" style="height: 360px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title">Batik Mega Mendung</h5>
+          <p class="card-text">Motif khas Cirebon yang menampilkan bentuk awan bergelombang. Filosofinya mencerminkan kesabaran, ketenangan, dan jiwa besar seperti awan yang menaungi bumi.</p>
+          <p class="fw-bold">Rp250.000</p>
+        </div>
+        </a>
+        <div class="card-body">
+          <div class="d-flex gap-2">
+            <button class="btn btn-batik" onclick="pesanSekarang('Batik Mega Mendung', 250000)">Pesan Sekarang</button>
+            <button class="btn btn-outline-secondary" onclick="masukkanKeranjang('Batik Mega Mendung', 250000)">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+      </div>
+      
+      <!-- Produk 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <a href="detailproduk.html?id=2" class="text-decoration-none text-batik">
+          <img src="css/Batik_Parang_Rusak-removebg-preview.png" class="card-img-top" alt="Batik Parang" style="height: 360px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Batik Parang Rusak</h5>
+            <p class="card-text">Salah satu motif klasik dari keraton Yogyakarta dan Surakarta. Memiliki pola diagonal menyerupai huruf "S" yang berulang.</p>
+            <p class="fw-bold">Rp300.000</p>
+          </div>
+          </a>
+          <div class="card-body">
+            <div class="d-flex gap-2">
+            <button class="btn btn-batik" onclick="pesanSekarang('Batik Parang Rusak', 300000)">Pesan Sekarang</button>
+            <button class="btn btn-outline-secondary" onclick="masukkanKeranjang('Batik Parang Rusak', 300000)">+ Keranjang</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Produk 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <a href="detailproduk.html?id=4" class="text-decoration-none text-batik">
+          <img src="css/batik_sido_luhur-removebg-preview.png" class="card-img-top" alt="Batik" style="height: 360px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Batik Sido Luhur</h5>
+            <p class="card-text">Mirip dengan Sido Mukti, tetapi memiliki makna lebih dalam. "Sido Luhur" berarti menjadi luhur atau mulia.</p>
+            <p class="fw-bold">Rp275.000</p>
+          </div>
+          </a>
+          <div class="card-body">
+            <div class="d-flex gap-2">
+            <button class="btn btn-batik" onclick="pesanSekarang('Batik Sido Luhur', 275000)">Pesan Sekarang</button>
+            <button class="btn btn-outline-secondary" onclick="masukkanKeranjang('Batik Sido Luhur', 275000)">+ Keranjang</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Produk 4 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <a href="detailproduk.html?id=5" class="text-decoration-none text-batik">
+          <img src="css/batik_pring_sedapur-removebg-preview.png" class="card-img-top" alt="Batik" style="height: 360px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Batik Pring Sedapur</h5>
+            <p class="card-text">"Pring" berarti bambu, "sedapur" bermakna sekeluarga.</p>
+            <p class="fw-bold">Rp275.000</p>
+          </div>
+          </a>
+          <div class="card-body">
+            <div class="d-flex gap-2">
+            <button class="btn btn-batik" onclick="pesanSekarang('Batik Pring Sedapur', 275000)">Pesan Sekarang</button>
+            <button class="btn btn-outline-secondary" onclick="masukkanKeranjang('Batik Pring Sedapur', 275000)">+ Keranjang</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Produk 5 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <a href="detailproduk.html?id=7" class="text-decoration-none text-batik">
+          <img src="css/batik_Parang_Curigo-removebg-preview.png" class="card-img-top" alt="Batik" style="height: 360px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Parang Curigo</h5>
+            <p class="card-text">Varian dari motif parang yang digabungkan dengan bentuk menyerupai keris ("curigo").</p>
+            <p class="fw-bold">Rp275.000</p>
+          </div>
+          </a>
+          <div class="card-body">
+            <div class="d-flex gap-2">
+            <button class="btn btn-batik" onclick="pesanSekarang('Batik Parang Curigo', 27.000)">Pesan Sekarang</button>
+            <button class="btn btn-outline-secondary" onclick="masukkanKeranjang('Batik Parang Curigo', 275000)">+ Keranjang</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Produk 6 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <a href="detailproduk.html?id=9" class="text-decoration-none text-batik">
+          <img src="css/Batik_Gurdo_Kembang-removebg-preview.png" class="card-img-top" alt="Batik Kawung" style="height: 360px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Batik Gurdo Kembang</h5>
+            <p class="card-text">Motif ini memadukan bentuk burung garuda (gurdo) dengan bunga (kembang).</p>
+          </div>
+          </a>
+          <div class="card-body">
+            <p class="fw-bold">Rp275.000</p>
+            <div class="d-flex gap-2">
+            <button class="btn btn-batik" onclick="pesanSekarang('Batik Gurdo Kembang', 275000)">Pesan Sekarang</button>
+            <button class="btn btn-outline-secondary" onclick="masukkanKeranjang('Batik Gurdo Kembang', 275000)">+ Keranjang</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Produk 7 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <a href="detailproduk.html?id=10" class="text-decoration-none text-batik">
+          <img src="css/Batik_Lereng_Wirasat_Kembang-removebg-preview.png" class="card-img-top" alt="Batik" style="height: 360px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Batik Lereng Wirasat</h5>
+            <p class="card-text">"Lereng" berarti lereng gunung dan biasanya memiliki motif diagonal. "Wirasat" mengandung makna peringatan atau petunjuk.</p>
+            <p class="fw-bold">Rp275.000</p>
+          </div>
+          </a>
+          <div class="card-body">
+            <div class="d-flex gap-2">
+            <button class="btn btn-batik" onclick="pesanSekarang('Batik Lereng Wirasat', 275000)">Pesan Sekarang</button>
+            <button class="btn btn-outline-secondary" onclick="masukkanKeranjang('Batik Lereng Wirasat', 275000)">+ Keranjang</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Produk 8 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <a href="detailproduk.html?id=3" class="text-decoration-none text-batik">
+          <img src="css/Batik_sido_Mukti-removebg-preview.png" class="card-img-top" alt="Batik Kawung" style="height: 360px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Batik Sido Mukti</h5>
+            <p class="card-text">Motif ini berarti "menjadi sejahtera.</p>
+          </div>
+          </a>
+          <div class="card-body">
+            <p class="fw-bold">Rp275.000</p>
+            <div class="d-flex gap-2">
+            <button class="btn btn-batik" onclick="pesanSekarang('Batik Sido Mukti', 275000)">Pesan Sekarang</button>
+            <button class="btn btn-outline-secondary" onclick="masukkanKeranjang('Batik Sido Mukti', 275000)">+ Keranjang</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Produk 9 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <a href="detailproduk.html?id=8" class="text-decoration-none text-batik">
+          <img src="css/Batik_Sogan-removebg-preview.png" class="card-img-top" alt="Batik Kawung" style="height: 360px; object-fit: cover;">
+              <div class="card-body">
+                  <h5 class="card-title">Batik Sogan</h5>
+                  <p class="card-text">Bukan nama motif, tapi merujuk pada warna khas batik tradisional Jawa yang didominasi cokelat kehitaman dan keemasan</p>
+                  <p class="fw-bold">Rp275.000</p>
+              </div>
+                </a>
+                <div class="card-body">
+                  <div class="d-flex gap-2">
+                  <button class="btn btn-batik" onclick="pesanSekarang('Batik Sogan', 275000)">Pesan Sekarang</button>
+                  <button class="btn btn-outline-secondary" onclick="masukkanKeranjang('Batik Sogan', 275000)">+ Keranjang</button>
+                  </div>
+              </div>
+        </div>
+      </div>
+
+      <!-- Produk 10 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <a href="detailproduk.html?id=6" class="text-decoration-none text-batik">
+          <img src="css/parang_Klitik-removebg-preview.png" class="card-img-top" alt="Batik Kawung" style="height: 360px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Batik Klitik</h5>
+            <p class="card-text">Motif ini termasuk ke dalam batik yang bermotif geometris dan biasanya tidak menampilkan unsur flora atau fauna.</p>
+            <p class="fw-bold">Rp275.000</p>
+          </div>
+          </a>
+          <div class="card-body">
+            <div class="d-flex gap-2">
+            <button class="btn btn-batik" onclick="pesanSekarang('Batik Klitik', 275000)">Pesan Sekarang</button>
+            <button class="btn btn-outline-secondary" onclick="masukkanKeranjang('Batik Klitik', 275000)">+ Keranjang</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="kontak" class="bg-batik text-white text-center py-4">
+    <div class="container">
+      <p>&copy; 2025 Batik.In. Semua Hak Dilindungi.</p>
+    </div>
+  </footer>
+  
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/keranjang.js"></script>
+
+</body>
+</html>

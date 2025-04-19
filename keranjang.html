@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Keranjang Belanja</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .navbar-brand {
+      font-weight: bold;
+      color: #533306;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Batik.In</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+        <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+        <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+        <li class="nav-item"><a class="nav-link" href="pembeli.html">Pembeli</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Keranjang</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Konten Keranjang -->
+<div class="container mt-5">
+  <h2 class="mb-4 text-center">Keranjang Belanja</h2>
+  <div id="daftarKeranjang"></div>
+</div>
+
+<!-- Script Keranjang -->
+<script>
+  let keranjang = JSON.parse(localStorage.getItem('keranjang')) || [];
+  const daftar = document.getElementById("daftarKeranjang");
+
+  function tampilkanKeranjang() {
+    if (keranjang.length === 0) {
+      daftar.innerHTML = "<div class='alert alert-warning text-center'>Keranjang masih kosong.</div>";
+      return;
+    }
+
+    let html = `
+      <div class="table-responsive">
+        <table class="table table-bordered align-middle">
+          <thead class="table-light">
+            <tr>
+              <th>No</th>
+              <th>Nama Produk</th>
+              <th>Harga</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+    `;
+
+    keranjang.forEach((item, index) => {
+      html += `
+        <tr>
+          <td>${index + 1}</td>
+          <td>${item.nama}</td>
+          <td>Rp${parseInt(item.harga).toLocaleString()}</td>
+          <td>
+            <button class="btn btn-danger btn-sm" onclick="hapusItem(${index})">Hapus</button>
+          </td>
+        </tr>
+      `;
+    });
+
+    html += `
+          </tbody>
+        </table>
+        <div class="text-end">
+          <button class="btn btn-outline-danger" onclick="kosongkanKeranjang()">Kosongkan Semua</button>
+        </div>
+        <h4 class="mt-4">Informasi Pembeli</h4>
+<form id="formCheckout">
+  <div class="mb-3">
+    <label for="nama" class="form-label">Nama</label>
+    <input type="text" id="nama" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" id="email" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label for="nohp" class="form-label">No HP</label>
+    <input type="text" id="nohp" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label for="alamat" class="form-label">Alamat</label>
+    <textarea id="alamat" class="form-control" required></textarea>
+  </div>
+  <button type="submit" class="btn btn-success">Checkout</button>
+</form>
+      </div>
+    `;
+
+    daftar.innerHTML = html;
+  }
+
+  function hapusItem(index) {
+    if (confirm("Yakin ingin menghapus produk ini dari keranjang?")) {
+      keranjang.splice(index, 1);
+      localStorage.setItem('keranjang', JSON.stringify(keranjang));
+      tampilkanKeranjang();
+    }
+  }
+
+  function kosongkanKeranjang() {
+    if (confirm("Yakin ingin mengosongkan keranjang?")) {
+      keranjang = [];
+      localStorage.removeItem('keranjang');
+      tampilkanKeranjang();
+    }
+  }
+
+  // Panggil saat halaman dimuat
+  
+  tampilkanKeranjang();
+</script>
+<script>
+    document.addEventListener('submit', function(e) {
+      if (e.target && e.target.id === 'formCheckout') {
+        e.preventDefault();
+  
+        const nama = document.getElementById('nama').value;
+        const email = document.getElementById('email').value;
+        const nohp = document.getElementById('nohp').value;
+        const alamat = document.getElementById('alamat').value;
+  
+        const produkDibeli = keranjang.map(item => item.nama).join(', ');
+  
+        const pembeli = JSON.parse(localStorage.getItem('pembeli')) || [];
+        pembeli.push({
+          nama,
+          email,
+          nohp,
+          alamat,
+          produk: produkDibeli,
+          waktu: new Date().toLocaleString()
+        });
+  
+        localStorage.setItem('pembeli', JSON.stringify(pembeli));
+        localStorage.removeItem('keranjang');
+  
+        alert('Checkout berhasil! Data pembeli telah disimpan.');
+        window.location.href = 'pembeli.html';
+      }
+    });
+  </script>  
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

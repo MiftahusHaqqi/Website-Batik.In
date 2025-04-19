@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Batik Nusantara</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+<script src="js/produk.js"></script>
+<script src="js/keranjang.js"></script>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-batik" href="#">Batik.In</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="#">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+        <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+        <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+        <li class="nav-item"><a class="nav-link" href="pembeli.html">Pembeli</a></li>
+        <li class="nav-item">
+          <a class="nav-link position-relative" href="keranjang.html">
+            🛒 Keranjang
+            <span id="jumlahKeranjang" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              0
+            </span>
+          </a>
+        </li>        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero-section d-flex align-items-center text-batik">
+  <div class="container text-center">
+    <h1 class="display-4 fw-bold">Eksplorasi Keindahan Batik Nusantara</h1>
+    <p class="lead">Temukan motif batik khas Indonesia dengan kualitas terbaik.</p>
+    <a href="#produk" class="btn btn-batik">Lihat Koleksi</a>
+  </div>
+</header>
+
+<!-- Produk Unggulan -->
+<section id="produk" class="py-5">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">Produk Unggulan</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <a href="detailproduk.html?id=1" class="text-decoration-none text-dark">
+        <img src="css/kain_batik_mega_mendung-removebg-preview.png" class="img-fluid rounded" alt="Batik 1" style="width: 100%; height: 400px; object-fit: cover;">
+        <h5 class="mt-2">Batik Mega Mendung</h5>
+        <p>Rp250.000</p>
+        </a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="detailproduk.html?id=2" class="text-decoration-none text-batik">
+        <img src="css/Batik_Parang_Rusak-removebg-preview.png" class="img-fluid rounded" alt="Batik 2" style="width: 100%; height: 400px; object-fit: cover;">
+        <h5 class="mt-2">Batik Parang Rusak</h5>
+        <p>Rp300.000</p>
+        </a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="detailproduk.html?id=3" class="text-decoration-none text-batik">
+        <img src="css/Batik_sido_Mukti-removebg-preview.png" class="img-fluid rounded" alt="Batik 3" style="width: 100%; height: 400px; object-fit: cover;">
+        <h5 class="mt-2">Batik Sido Mukti</h5>
+        <p>Rp275.000</p>
+        </a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="detailproduk.html?id=4" class="text-decoration-none text-batik">
+        <img src="css/batik_sido_luhur-removebg-preview.png" class="img-fluid rounded" alt="Batik 3" style="width: 100%; height: 400px; object-fit: cover;">
+        <h5 class="mt-2">Batik Sido Luhur</h5>
+        <p>Rp275.000</p>
+        </a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="detailproduk.html?id=5" class="text-decoration-none text-batik">
+        <img src="css/batik_pring_sedapur-removebg-preview.png" class="img-fluid rounded" alt="Batik 3" style="width: 100%; height: 400px; object-fit: cover;">
+        <h5 class="mt-2">Batik Pring Sedapur</h5>
+        <p>Rp275.000</p>
+        </a>
+      </div>
+      <div class="col-md-4 mb-">
+        <a href="detailproduk.html?id=6" class="text-decoration-none text-batik">
+        <img src="css/parang_Klitik-removebg-preview.png" class="img-fluid rounded" alt="Batik 3" style="width: 100%; height: 400px; object-fit: cover;">
+        <h5 class="mt-2">Batik Klitik</h5>
+        <p>Rp275.000</p>
+        </a>
+      </div>
+      <div>
+        <a href="produk.html" class="btn btn-primary" style="background-color: #533306; border: none;">Lihat Produk</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        
+        <!-- Left Image -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="https://images.pexels.com/photos/2422574/pexels-photo-2422574.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Woman holding plant" class="img-fluid rounded">
+        </div>
+        
+        <!-- Right Content -->
+        <div class="col-md-6">
+          <small class="text-uppercase text-muted mb-2 d-block">Cerita Kami </small>
+          <h2 class="fw-bold mb-3">Melestarikan Budaya Lewat Batik</h2>
+          <p class="text-muted">
+            Batik.in adalah UMKM lokal yang berkomitmen memperkenalkan keindahan dan makna batik Indonesia kepada dunia. Kami bekerja sama dengan pengrajin batik dari berbagai daerah untuk menghasilkan karya yang otentik dan penuh nilai budaya.
+          </p>
+          </p>
+          <p class="text-muted">
+            Setiap lembar batik yang kami hadirkan memiliki cerita, tradisi, dan semangat yang diwariskan dari generasi ke generasi. Mari bersama lestarikan warisan budaya Indonesia dengan memilih produk lokal yang berkualitas.
+          </p>
+          <a href="tentang.html" class="btn btn-primary" style="background-color: #8b4513; border: none;">Read More</a>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+  <!-- Info Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-4">
+          <h4>100% Lokal</h4>
+          <p>Produk buatan UMKM asli Indonesia</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Produk Berkualitas</h4>
+          <p>Dibuat dari kain berkualitas dan pembatik terbaik</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Kemasan Menarik</h4>
+          <p>Cocok digunakan untuk membuat baju, kain sarung dan langsung digunakan</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Footer -->
+<footer id="kontak" class="bg-batik text-white text-center py-4">
+  <div class="container">
+    <p>&copy; 2025 Batik.In. Semua Hak Dilindungi.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

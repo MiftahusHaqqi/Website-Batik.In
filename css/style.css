@@ -1,0 +1,37 @@
+body {
+    background-color: #f5f5f5;
+  }
+  
+.text-batik {
+    color: #8B4513;
+  }
+  
+.bg-batik {
+    background-color: #8B4513;
+  }
+  
+.btn-batik {
+    background-color: #8B4513;
+    color: white;
+    border: none;
+  }
+  
+  .btn-batik:hover {
+    background-color: #A0522D;
+  }
+
+.hero-section {
+    background-image: url(https://images.pexels.com/photos/2422574/pexels-photo-2422574.jpeg?auto=compress&cs=tinysrgb&w=600);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+
+footer {
+    margin-top: 60px;
+}
